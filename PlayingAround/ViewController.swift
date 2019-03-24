@@ -12,11 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var label: UILabel!
-//    @IBOutlet weak var buttonOne: UIButton!
-//    @IBAction func button1(_ sender: Any) {
-//        print("Button was pressed")
-////        recommendRandomly()
-//    }
     override func becomeFirstResponder() -> Bool {
         return true
     }
@@ -30,24 +25,17 @@ class ViewController: UIViewController {
         let length: Int = recommendations.count
         let randomIndex = Int(arc4random_uniform(UInt32(length)))
         let rec = recommendations[randomIndex]
-//        buttonOne.setTitle(rec, for: .normal)
         label.text = rec
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         print("App is loaded")
-        label.text = "Shake me to find out"
+        label.text = "SHAKE ME"
         labelName.text = "What fruit should I eat?"
-
-        //        buttonOne.setTitle("How can I help you?", for: .normal)
-
-        // put the code here 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
